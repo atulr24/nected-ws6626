@@ -1,0 +1,166 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-11-11T13:26:51.585Z",
+  "updatedAt": "2025-11-11T13:28:46.00616Z",
+  "isDeleted": false,
+  "testedAt": "2025-11-11T13:28:46.005Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "de875187-b58a-46e6-bbd4-ac59284e81a0",
+  "name": "Test2Rule",
+  "commitId": "commit-b1f16507-115b-43fe-b590-5e7b9399c1b2",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-11 13:26:51",
+   "timeStamp": "2025-11-11T13:26:51.585633467Z"
+  },
+  "customInput": {
+   "name": {
+    "name": "name",
+    "dataType": "string",
+    "executedValue": "Atul"
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "nextId": "g_GJ5QW7",
+     "isEnabled": true
+    },
+    "g_GJ5QW7": {
+     "prevId": "rule_01",
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "type": "simpleCondition"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03"
+  },
+  "action": {
+   "then": {
+    
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "c_mbe1oq": {
+     "name": "Any",
+     "operator": "neq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_GJ5QW7",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_utS1V8"
+     ],
+     "siblingIndex": 1
+    },
+    "g_GJ5QW7": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_mbe1oq"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_3MltYk": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    },
+    "rhs_utS1V8": {
+     "sourceType": "globalVar",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "test",
+     "parent": "c_mbe1oq",
+     "siblingIndex": 1
+    },
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_3MltYk"
+     ],
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "name",
+  "description": "",
+  "policy": "first",
+  "version": "draft",
+  "type": "decisionTable",
+  "dataSetId": "",
+  "settings": {
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-b1f16507-115b-43fe-b590-5e7b9399c1b2",
+   "entityType": "rule",
+   "entityId": "de875187-b58a-46e6-bbd4-ac59284e81a0",
+   "entityVersion": "draft",
+   "entityNodeId": "test",
+   "dependencyType": "variable",
+   "dependencyId": "50eabd71-ffcd-443a-b8ea-102c55e40c5b",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-11T13:28:40.76877Z",
+   "updatedAt": "2025-11-11T13:28:40.76877Z"
+  }
+ ]
+}
