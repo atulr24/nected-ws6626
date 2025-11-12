@@ -1,0 +1,26 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-11-12T06:57:01.272Z",
+  "updatedAt": "2025-11-12T06:57:01.272Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "6a8ea0e4-ee1c-4cb5-8029-bd52482c218c",
+  "name": "json",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "json",
+  "value": {
+   "data": {
+    "sdf": 3,
+    "test": "sdfsdf"
+   }
+  }
+ }
+}

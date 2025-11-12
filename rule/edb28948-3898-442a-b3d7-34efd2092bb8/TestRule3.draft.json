@@ -3,14 +3,14 @@
  "category": "decisionTable",
  "data": {
   "createdAt": "2025-11-12T06:03:18.787Z",
-  "updatedAt": "2025-11-12T07:20:14.455639Z",
+  "updatedAt": "2025-11-12T07:22:11.903361Z",
   "isDeleted": false,
   "testedAt": "2025-11-12T07:20:14.455Z",
   "publishedAt": "0001-01-01T00:00:00Z",
   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
   "name": "TestRule3",
   "commitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
-  "status": "tested",
+  "status": "draft",
   "lastVersion": "",
   "isLive": false,
   "commitInfo": {
@@ -21,13 +21,30 @@
    "name": {
     "name": "name",
     "dataType": "string",
+    "isCaseSensitive": true,
     "attribute": "name",
     "sourceType": "dataSet",
-    "executedValue": "email@email.com"
+    "executedValue": "email@email.com",
+    "next": "string"
+   },
+   "string": {
+    "name": "string",
+    "dataType": "string",
+    "isOptional": true,
+    "isNullable": true,
+    "executedValue": "Atul2",
+    "previous": "name",
+    "schemaId": "ff718b7f-a05e-4964-bd02-fce3f7e73bc9"
    }
   },
   "decisionTable": {
    "rows": {
+    "g_Y69TNn": {
+     "nextId": "g_fabb7c",
+     "prevId": "rule_01",
+     "firstOutputData": "output_IPzQgn",
+     "isEnabled": true
+    },
     "g_fabb7c": {
      "nextId": "g_xL0IID",
      "prevId": "g_Y69TNn",
@@ -49,12 +66,6 @@
      "nextId": "g_Y69TNn",
      "firstOutputData": "output_yGccqO",
      "isEnabled": true
-    },
-    "g_Y69TNn": {
-     "nextId": "g_fabb7c",
-     "prevId": "rule_01",
-     "firstOutputData": "output_IPzQgn",
-     "isEnabled": true
     }
    },
    "properties": {
@@ -68,29 +79,6 @@
     }
    },
    "results": {
-    "result_OEwOlD": {
-     "nextId": "result_UdKIjT",
-     "prevId": "result_mynfBn",
-     "dataType": "json",
-     "keyName": "josn"
-    },
-    "result_UdKIjT": {
-     "prevId": "result_OEwOlD",
-     "dataType": "excelFormula",
-     "keyName": "formula"
-    },
-    "result_m4UXYT": {
-     "nextId": "result_q49wfo",
-     "prevId": "result_MeuGWf",
-     "dataType": "numeric",
-     "keyName": "numeric"
-    },
-    "result_mynfBn": {
-     "nextId": "result_OEwOlD",
-     "prevId": "result_HkcETt",
-     "dataType": "list",
-     "keyName": "list"
-    },
     "result_q1pczs": {
      "nextId": "result_MeuGWf",
      "dataType": "string",
@@ -113,6 +101,29 @@
      "prevId": "result_q1pczs",
      "dataType": "string",
      "keyName": "string"
+    },
+    "result_OEwOlD": {
+     "nextId": "result_UdKIjT",
+     "prevId": "result_mynfBn",
+     "dataType": "json",
+     "keyName": "josn"
+    },
+    "result_UdKIjT": {
+     "prevId": "result_OEwOlD",
+     "dataType": "excelFormula",
+     "keyName": "formula"
+    },
+    "result_m4UXYT": {
+     "nextId": "result_q49wfo",
+     "prevId": "result_MeuGWf",
+     "dataType": "numeric",
+     "keyName": "numeric"
+    },
+    "result_mynfBn": {
+     "nextId": "result_OEwOlD",
+     "prevId": "result_HkcETt",
+     "dataType": "list",
+     "keyName": "list"
     }
    },
    "firstRow": "rule_01",
@@ -123,33 +134,23 @@
   "action": {
    "then": {
     "outputData": {
-     "output_7Eg3m6": {
-      "name": "josn",
-      "dataType": "json",
-      "next": "output_GU68ZQ",
-      "executedValue": {
-       "name": "sad"
-      }
+     "output_oG04u0": {
+      "name": "date",
+      "dataType": "date",
+      "next": "output_i3EJw4",
+      "executedValue": "2025-11-12"
      },
-     "output_GU68ZQ": {
-      "name": "formula",
-      "dataType": "excelFormula",
-      "executedValue": true
+     "aggData_stringConstant": {
+      "name": "stringConstant",
+      "dataType": "string",
+      "next": "aggData_datecons",
+      "executedValue": "atul"
      },
-     "output_mZGYpx": {
-      "name": "formula",
-      "dataType": "excelFormula",
-      "executedValue": "email@email.com"
-     },
-     "output_oaOLsk": {
-      "name": "formula",
-      "dataType": "excelFormula",
-      "executedValue": "2025-11-12T12:34:05+05:30"
-     },
-     "aggData_jsCOde": {
-      "name": "jsCOde",
-      "dataType": "jsFormula",
-      "executedValue": "additionData"
+     "output_467AGZ": {
+      "name": "numeric",
+      "dataType": "numeric",
+      "next": "output_cmlTBb",
+      "executedValue": 4
      },
      "output_CWqApI": {
       "name": "list",
@@ -162,169 +163,11 @@
        4
       ]
      },
-     "output_fVUrAc": {
-      "name": "list",
-      "dataType": "list",
-      "next": "output_tFOIlm",
-      "executedValue": [
-       "2025-11-11",
-       "2025-11-12"
-      ]
-     },
-     "output_fgGPDT": {
-      "name": "numeric",
-      "dataType": "numeric",
-      "next": "output_jwd3We",
-      "executedValue": 2
-     },
-     "output_jDZx80": {
-      "name": "formula",
-      "dataType": "excelFormula",
-      "executedValue": [
-       "aas",
-       "ASd",
-       "asd"
-      ]
-     },
-     "output_yGccqO": {
-      "name": "keyName",
-      "dataType": "excelFormula",
-      "next": "output_bxw7OP",
-      "executedValue": "email@email.com"
-     },
-     "aggData_numericConstnatn": {
-      "name": "numericConstnatn",
-      "dataType": "numeric",
-      "next": "aggData_jsonCons",
-      "executedValue": 9
-     },
-     "output_4uOfrS": {
-      "name": "list",
-      "dataType": "list",
-      "next": "output_7t21bo",
-      "executedValue": [
-       "asd",
-       "asd"
-      ]
-     },
-     "output_IPzQgn": {
-      "name": "keyName",
-      "dataType": "excelFormula",
-      "next": "output_EInUVe",
-      "executedValue": "email@email.com"
-     },
-     "output_Ib9gic": {
-      "name": "keyName",
-      "dataType": "string",
-      "next": "output_JW1jXN",
-      "executedValue": "Value"
-     },
-     "output_N9a5bX": {
-      "name": "numeric",
-      "dataType": "numeric",
-      "next": "output_kqMB0f",
-      "executedValue": 1
-     },
-     "output_bxw7OP": {
-      "name": "string",
-      "dataType": "string",
-      "next": "output_N9a5bX",
-      "executedValue": "Value"
-     },
-     "output_koqyxR": {
-      "name": "formula",
-      "dataType": "excelFormula",
-      "executedValue": "atul raizada"
-     },
-     "aggData_datecons": {
-      "name": "datecons",
-      "dataType": "date",
-      "next": "aggData_numericConstnatn",
-      "executedValue": ""
-     },
-     "output_4BhR9g": {
-      "name": "numeric",
-      "dataType": "numeric",
-      "next": "output_bD0PtY",
-      "executedValue": 0
-     },
-     "output_eJsK83": {
-      "name": "keyName",
-      "dataType": "excelFormula",
-      "next": "output_bhedr8",
-      "executedValue": "email@email.com"
-     },
-     "aggData_stringConstant": {
-      "name": "stringConstant",
-      "dataType": "string",
-      "next": "aggData_datecons",
-      "executedValue": "atul"
-     },
-     "aggData_list": {
-      "name": "list",
-      "dataType": "list",
-      "next": "aggData_stringConstant",
-      "executedValue": [
-       12,
-       23,
-       34
-      ]
-     },
      "output_DfReHr": {
       "name": "string",
       "dataType": "string",
       "next": "output_467AGZ",
       "executedValue": "Value"
-     },
-     "output_JW1jXN": {
-      "name": "string",
-      "dataType": "string",
-      "next": "output_J2r8pY",
-      "executedValue": "Value"
-     },
-     "output_bD0PtY": {
-      "name": "date",
-      "dataType": "date",
-      "next": "output_oIhnRQ",
-      "executedValue": "2025-11-04"
-     },
-     "output_fFXpad": {
-      "name": "keyName",
-      "dataType": "string",
-      "next": "output_DfReHr",
-      "executedValue": "Value"
-     },
-     "output_i3EJw4": {
-      "name": "dateTime",
-      "dataType": "dateTime",
-      "next": "output_uFbk9O",
-      "executedValue": "2025-11-12T12:34:05+05:30"
-     },
-     "output_oG04u0": {
-      "name": "date",
-      "dataType": "date",
-      "next": "output_i3EJw4",
-      "executedValue": "2025-11-12"
-     },
-     "output_oIhnRQ": {
-      "name": "dateTime",
-      "dataType": "dateTime",
-      "next": "output_4uOfrS",
-      "executedValue": "2025-11-12T12:34:39+05:30"
-     },
-     "output_7t21bo": {
-      "name": "josn",
-      "dataType": "json",
-      "next": "output_jDZx80",
-      "executedValue": {
-       "date": "2025-11-10"
-      }
-     },
-     "output_J2r8pY": {
-      "name": "numeric",
-      "dataType": "numeric",
-      "next": "output_oG04u0",
-      "executedValue": 0
      },
      "output_Oc7O0Y": {
       "name": "list",
@@ -342,71 +185,47 @@
        6
       ]
      },
-     "output_VhIh4K": {
-      "name": "dateTime",
-      "dataType": "dateTime",
-      "next": "output_fVUrAc",
-      "executedValue": "2025-11-12T12:34:05+05:30"
-     },
-     "output_bhedr8": {
-      "name": "string",
-      "dataType": "string",
-      "next": "output_4BhR9g",
-      "executedValue": "ads"
-     },
-     "output_uFbk9O": {
-      "name": "list",
-      "dataType": "list",
-      "next": "output_H7GeIb",
-      "executedValue": [
-       "asd",
-       "sda",
-       "sdsfg"
-      ]
-     },
-     "output_467AGZ": {
-      "name": "numeric",
-      "dataType": "numeric",
-      "next": "output_cmlTBb",
-      "executedValue": 4
-     },
-     "output_9bRltT": {
-      "name": "dateTime",
-      "dataType": "dateTime",
-      "next": "output_CWqApI",
-      "executedValue": "2025-11-13T00:00:00+05:30"
-     },
-     "output_ORk6LU": {
-      "name": "dateTime",
-      "dataType": "dateTime",
-      "next": "output_Oc7O0Y",
-      "executedValue": "2025-11-12T12:34:39+05:30"
-     },
-     "output_jwd3We": {
+     "output_bD0PtY": {
       "name": "date",
       "dataType": "date",
-      "next": "output_9bRltT",
-      "executedValue": "2025-11-12"
+      "next": "output_oIhnRQ",
+      "executedValue": "2025-11-04"
      },
-     "output_kqMB0f": {
+     "output_cmlTBb": {
       "name": "date",
       "dataType": "date",
-      "next": "output_ORk6LU",
+      "next": "output_VhIh4K",
       "executedValue": "2025-11-12"
      },
-     "aggData_jsonCons": {
-      "name": "jsonCons",
+     "output_mZGYpx": {
+      "name": "formula",
+      "dataType": "excelFormula",
+      "executedValue": "email@email.com"
+     },
+     "output_tFOIlm": {
+      "name": "josn",
       "dataType": "json",
-      "next": "aggData_jsCOde",
+      "next": "output_oaOLsk",
       "executedValue": {
-       "addData": "name"
+       "date": "2025-10-10"
       }
      },
-     "output_EInUVe": {
-      "name": "string",
-      "dataType": "string",
-      "next": "output_fgGPDT",
-      "executedValue": "email@email.com"
+     "output_4uOfrS": {
+      "name": "list",
+      "dataType": "list",
+      "next": "output_7t21bo",
+      "executedValue": [
+       "asd",
+       "asd"
+      ]
+     },
+     "output_7t21bo": {
+      "name": "josn",
+      "dataType": "json",
+      "next": "output_jDZx80",
+      "executedValue": {
+       "date": "2025-11-10"
+      }
      },
      "output_H7GeIb": {
       "name": "josn",
@@ -418,95 +237,249 @@
        }
       }
      },
-     "output_cmlTBb": {
+     "output_bhedr8": {
+      "name": "string",
+      "dataType": "string",
+      "next": "output_4BhR9g",
+      "executedValue": "ads"
+     },
+     "output_i3EJw4": {
+      "name": "dateTime",
+      "dataType": "dateTime",
+      "next": "output_uFbk9O",
+      "executedValue": "2025-11-12T12:34:05+05:30"
+     },
+     "output_oIhnRQ": {
+      "name": "dateTime",
+      "dataType": "dateTime",
+      "next": "output_4uOfrS",
+      "executedValue": "2025-11-12T12:34:39+05:30"
+     },
+     "output_uFbk9O": {
+      "name": "list",
+      "dataType": "list",
+      "next": "output_H7GeIb",
+      "executedValue": [
+       "asd",
+       "sda",
+       "sdsfg"
+      ]
+     },
+     "output_Ib9gic": {
+      "name": "keyName",
+      "dataType": "string",
+      "next": "output_JW1jXN",
+      "executedValue": "Value"
+     },
+     "output_fFXpad": {
+      "name": "keyName",
+      "dataType": "string",
+      "next": "output_DfReHr",
+      "executedValue": "Value"
+     },
+     "output_jwd3We": {
       "name": "date",
       "dataType": "date",
-      "next": "output_VhIh4K",
+      "next": "output_9bRltT",
       "executedValue": "2025-11-12"
      },
-     "output_tFOIlm": {
-      "name": "josn",
-      "dataType": "json",
-      "next": "output_oaOLsk",
-      "executedValue": {
-       "date": "2025-10-10"
-      }
+     "output_koqyxR": {
+      "name": "formula",
+      "dataType": "excelFormula",
+      "executedValue": "atul raizada"
+     },
+     "output_kqMB0f": {
+      "name": "date",
+      "dataType": "date",
+      "next": "output_ORk6LU",
+      "executedValue": "2025-11-12"
      },
      "output_yIgtn0": {
       "name": "josn",
       "dataType": "json",
       "next": "output_mZGYpx",
       "executedValue": {
-       "abc": "asd",
        "asda": 1,
        "asdd": [
         1,
         2,
         3
-       ]
+       ],
+       "abc": "asd"
       }
+     },
+     "aggData_jsonCons": {
+      "name": "jsonCons",
+      "dataType": "json",
+      "next": "aggData_jsCOde",
+      "executedValue": {
+       "addData": "name"
+      }
+     },
+     "output_fVUrAc": {
+      "name": "list",
+      "dataType": "list",
+      "next": "output_tFOIlm",
+      "executedValue": [
+       "2025-11-11",
+       "2025-11-12"
+      ]
+     },
+     "output_fgGPDT": {
+      "name": "numeric",
+      "dataType": "numeric",
+      "next": "output_jwd3We",
+      "executedValue": 2
+     },
+     "output_4BhR9g": {
+      "name": "numeric",
+      "dataType": "numeric",
+      "next": "output_bD0PtY",
+      "executedValue": 0
+     },
+     "output_IPzQgn": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "next": "output_EInUVe",
+      "executedValue": "email@email.com"
+     },
+     "output_N9a5bX": {
+      "name": "numeric",
+      "dataType": "numeric",
+      "next": "output_kqMB0f",
+      "executedValue": 1
+     },
+     "output_ORk6LU": {
+      "name": "dateTime",
+      "dataType": "dateTime",
+      "next": "output_Oc7O0Y",
+      "executedValue": "2025-11-12T12:34:39+05:30"
+     },
+     "output_bxw7OP": {
+      "name": "string",
+      "dataType": "string",
+      "next": "output_N9a5bX",
+      "executedValue": "Value"
+     },
+     "output_oaOLsk": {
+      "name": "formula",
+      "dataType": "excelFormula",
+      "executedValue": "2025-11-12T12:34:05+05:30"
+     },
+     "output_EInUVe": {
+      "name": "string",
+      "dataType": "string",
+      "next": "output_fgGPDT",
+      "executedValue": "email@email.com"
+     },
+     "output_J2r8pY": {
+      "name": "numeric",
+      "dataType": "numeric",
+      "next": "output_oG04u0",
+      "executedValue": 0
+     },
+     "output_yGccqO": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "next": "output_bxw7OP",
+      "executedValue": "email@email.com"
+     },
+     "aggData_jsCOde": {
+      "name": "jsCOde",
+      "dataType": "jsFormula",
+      "executedValue": "additionData"
+     },
+     "aggData_datecons": {
+      "name": "datecons",
+      "dataType": "date",
+      "next": "aggData_numericConstnatn",
+      "executedValue": ""
+     },
+     "output_9bRltT": {
+      "name": "dateTime",
+      "dataType": "dateTime",
+      "next": "output_CWqApI",
+      "executedValue": "2025-11-13T00:00:00+05:30"
+     },
+     "aggData_numericConstnatn": {
+      "name": "numericConstnatn",
+      "dataType": "numeric",
+      "next": "aggData_jsonCons",
+      "executedValue": 9
+     },
+     "output_7Eg3m6": {
+      "name": "josn",
+      "dataType": "json",
+      "next": "output_GU68ZQ",
+      "executedValue": {
+       "name": "sad"
+      }
+     },
+     "output_eJsK83": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "next": "output_bhedr8",
+      "executedValue": "email@email.com"
+     },
+     "aggData_list": {
+      "name": "list",
+      "dataType": "list",
+      "next": "aggData_stringConstant",
+      "executedValue": [
+       12,
+       23,
+       34
+      ]
+     },
+     "output_GU68ZQ": {
+      "name": "formula",
+      "dataType": "excelFormula",
+      "executedValue": true
+     },
+     "output_JW1jXN": {
+      "name": "string",
+      "dataType": "string",
+      "next": "output_J2r8pY",
+      "executedValue": "Value"
+     },
+     "output_VhIh4K": {
+      "name": "dateTime",
+      "dataType": "dateTime",
+      "next": "output_fVUrAc",
+      "executedValue": "2025-11-12T12:34:05+05:30"
+     },
+     "output_jDZx80": {
+      "name": "formula",
+      "dataType": "excelFormula",
+      "executedValue": [
+       "aas",
+       "ASd",
+       "asd"
+      ]
      }
     },
     "actionNode": {
-     "actionData_sendSalck": {
-      "name": "sendSalck",
-      "connectorId": "ea3f7114-1a38-4224-a6a1-fb692cee6699",
-      "entity": "",
-      "entityId": "",
-      "config": {
-       "settings": {
-        
-       },
-       "tokenType": "userToken",
-       "actionMethod": "sendMessage",
-       "text": "Test",
-       "query": "",
-       "action": "sendMessage",
-       "channel": {
-        "label": "atul-channel",
-        "value": "atul-channel",
-        "is_private": false
-       }
-      }
-     },
-     "actionData_callWorkFlow": {
-      "name": "callWorkFlow",
-      "connectorId": "",
-      "entity": "workflow",
-      "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
-      "config": {
-       "query": ""
-      },
-      "input": {
-       "name": {
-        "name": "name",
-        "dataType": "string",
-        "returnType": "email@email.com"
-       }
-      },
-      "next": "actionData_restApi"
-     },
      "actionData_restApi": {
       "name": "restApi",
       "connectorId": "1040715c-369c-4f03-b86c-4a23991afa83",
       "entity": "",
       "entityId": "",
       "config": {
-       "queryParams": [],
        "path": "/posts/2",
        "query": "",
        "method": "GET",
        "headers": [],
        "settings": {
         "cache": {
-         "cacheKeys": "",
          "enabled": false,
          "duration": {
           "unit": "d",
           "value": 0
-         }
+         },
+         "cacheKeys": ""
         }
-       }
+       },
+       "queryParams": []
       },
       "next": "actionData_sendSalck"
      },
@@ -526,6 +499,44 @@
        }
       },
       "next": "actionData_callWorkFlow"
+     },
+     "actionData_sendSalck": {
+      "name": "sendSalck",
+      "connectorId": "ea3f7114-1a38-4224-a6a1-fb692cee6699",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "text": "Test",
+       "query": "",
+       "action": "sendMessage",
+       "channel": {
+        "value": "atul-channel",
+        "is_private": false,
+        "label": "atul-channel"
+       },
+       "settings": {
+        
+       },
+       "tokenType": "userToken",
+       "actionMethod": "sendMessage"
+      }
+     },
+     "actionData_callWorkFlow": {
+      "name": "callWorkFlow",
+      "connectorId": "",
+      "entity": "workflow",
+      "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+      "config": {
+       "query": ""
+      },
+      "input": {
+       "name": {
+        "name": "name",
+        "dataType": "string",
+        "returnType": "email@email.com"
+       }
+      },
+      "next": "actionData_restApi"
      }
     },
     "firstActionNode": "actionData_callRule"
@@ -536,145 +547,12 @@
   },
   "conditions": {
    "nodes": {
-    "c_bLpZPS": {
-     "name": "Any",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_xL0IID",
-     "leftNode": [
-      "rule_03"
-     ],
-     "rightNode": [
-      "rhs_XKCOxR"
-     ],
-     "siblingIndex": 1
-    },
-    "c_u3cQkA": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "rule_01",
-     "leftNode": [
-      "param_a6UuS2"
-     ],
-     "rightNode": [
-      "rhs_Sblk4G"
-     ],
-     "siblingIndex": 1
-    },
-    "c_xP8vkU": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_Y69TNn",
-     "leftNode": [
-      "param_a6UuS2"
-     ],
-     "rightNode": [
-      "rhs_O1sru4"
-     ],
-     "siblingIndex": 1
-    },
-    "g_fabb7c": {
-     "operator": "and",
-     "nodeType": "group",
-     "children": [
-      "c_ItpVDp",
-      "c_EJnKUx"
-     ],
-     "siblingIndex": 1
-    },
-    "rhs_1Ql6F3": {
-     "sourceType": "dataSet",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "name",
-     "parent": "c_iPjgg6",
-     "siblingIndex": 1
-    },
-    "rhs_89dDJG": {
-     "value": "email@email.com",
-     "dataType": "string",
-     "nodeType": "excelFormula",
-     "query": "\"{{.customInput.name}}\"",
-     "parent": "c_V2s7iX",
-     "siblingIndex": 1,
-     "returnType": "string"
-    },
-    "rhs_HvMUhQ": {
-     "sourceType": "dataSet",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "name",
-     "parent": "c_ItpVDp",
-     "siblingIndex": 1
-    },
-    "rhs_O1sru4": {
+    "rhs_Sblk4G": {
      "sourceType": "customInput",
      "dataType": "string",
      "nodeType": "params",
      "attribute": "name",
-     "parent": "c_xP8vkU",
-     "siblingIndex": 1
-    },
-    "rule_01": {
-     "operator": "and",
-     "nodeType": "group",
-     "children": [
-      "rule_02",
-      "c_u3cQkA"
-     ],
-     "siblingIndex": 1
-    },
-    "rule_03": {
-     "sourceType": "customInput",
-     "dataType": "string",
-     "nodeType": "params",
-     "attribute": "name",
-     "siblingIndex": 1
-    },
-    "c_RTL1Lf": {
-     "name": "Any",
-     "operator": "any",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_nIY1xO",
-     "leftNode": [
-      "rule_03"
-     ],
-     "siblingIndex": 1
-    },
-    "c_iPjgg6": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_Y69TNn",
-     "leftNode": [
-      "rule_03"
-     ],
-     "rightNode": [
-      "rhs_1Ql6F3"
-     ],
-     "siblingIndex": 1
-    },
-    "g_nIY1xO": {
-     "operator": "and",
-     "nodeType": "group",
-     "children": [
-      "c_RTL1Lf",
-      "c_1786qT"
-     ],
-     "siblingIndex": 1
-    },
-    "rhs_XKCOxR": {
-     "value": "notAtul",
-     "dataType": "string",
-     "nodeType": "constant",
-     "parent": "c_bLpZPS",
+     "parent": "c_u3cQkA",
      "siblingIndex": 1
     },
     "param_a6UuS2": {
@@ -709,31 +587,14 @@
      ],
      "siblingIndex": 1
     },
-    "c_EJnKUx": {
-     "value": "",
-     "operator": "eq",
+    "c_RTL1Lf": {
+     "name": "Any",
+     "operator": "any",
      "dataType": "string",
      "nodeType": "condition",
-     "parent": "g_fabb7c",
-     "leftNode": [
-      "param_a6UuS2"
-     ],
-     "rightNode": [
-      "rhs_KnFFuP"
-     ],
-     "siblingIndex": 1
-    },
-    "c_ItpVDp": {
-     "value": "",
-     "operator": "eq",
-     "dataType": "string",
-     "nodeType": "condition",
-     "parent": "g_fabb7c",
+     "parent": "g_nIY1xO",
      "leftNode": [
       "rule_03"
-     ],
-     "rightNode": [
-      "rhs_HvMUhQ"
      ],
      "siblingIndex": 1
     },
@@ -751,6 +612,76 @@
      ],
      "siblingIndex": 1
     },
+    "c_u3cQkA": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_Sblk4G"
+     ],
+     "siblingIndex": 1
+    },
+    "g_fabb7c": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_ItpVDp",
+      "c_EJnKUx"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_O1sru4": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_xP8vkU",
+     "siblingIndex": 1
+    },
+    "rhs_XKCOxR": {
+     "value": "notAtul",
+     "dataType": "string",
+     "nodeType": "constant",
+     "parent": "c_bLpZPS",
+     "siblingIndex": 1
+    },
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02",
+      "c_u3cQkA"
+     ],
+     "siblingIndex": 1
+    },
+    "c_EJnKUx": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_fabb7c",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_KnFFuP"
+     ],
+     "siblingIndex": 1
+    },
+    "g_nIY1xO": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_RTL1Lf",
+      "c_1786qT"
+     ],
+     "siblingIndex": 1
+    },
     "g_xL0IID": {
      "operator": "and",
      "nodeType": "group",
@@ -760,20 +691,100 @@
      ],
      "siblingIndex": 1
     },
-    "rhs_KnFFuP": {
-     "sourceType": "customInput",
+    "rhs_1Ql6F3": {
+     "sourceType": "dataSet",
      "dataType": "string",
      "nodeType": "params",
      "attribute": "name",
-     "parent": "c_EJnKUx",
+     "parent": "c_iPjgg6",
      "siblingIndex": 1
     },
-    "rhs_Sblk4G": {
+    "rhs_HvMUhQ": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_ItpVDp",
+     "siblingIndex": 1
+    },
+    "rule_03": {
      "sourceType": "customInput",
      "dataType": "string",
      "nodeType": "params",
      "attribute": "name",
-     "parent": "c_u3cQkA",
+     "siblingIndex": 1
+    },
+    "c_xP8vkU": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_Y69TNn",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_O1sru4"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_89dDJG": {
+     "value": "email@email.com",
+     "dataType": "string",
+     "nodeType": "excelFormula",
+     "query": "\"{{.customInput.name}}\"",
+     "parent": "c_V2s7iX",
+     "siblingIndex": 1,
+     "returnType": "string"
+    },
+    "rhs_p1GpFi": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    },
+    "c_ItpVDp": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_fabb7c",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_HvMUhQ"
+     ],
+     "siblingIndex": 1
+    },
+    "c_bLpZPS": {
+     "name": "Any",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_xL0IID",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_XKCOxR"
+     ],
+     "siblingIndex": 1
+    },
+    "c_iPjgg6": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_Y69TNn",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_1Ql6F3"
+     ],
      "siblingIndex": 1
     },
     "g_Y69TNn": {
@@ -785,12 +796,12 @@
      ],
      "siblingIndex": 1
     },
-    "rhs_p1GpFi": {
-     "sourceType": "dataSet",
+    "rhs_KnFFuP": {
+     "sourceType": "customInput",
      "dataType": "string",
      "nodeType": "params",
      "attribute": "name",
-     "parent": "rule_02",
+     "parent": "c_EJnKUx",
      "siblingIndex": 1
     }
    }
@@ -827,13 +838,26 @@
    "entityType": "rule",
    "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
    "entityVersion": "draft",
+   "entityNodeId": "ci-string",
+   "dependencyType": "module_schema",
+   "dependencyId": "ff718b7f-a05e-4964-bd02-fce3f7e73bc9",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T07:22:11.93805Z",
+   "updatedAt": "2025-11-12T07:22:11.93805Z"
+  },
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
    "entityNodeId": "listDynamic",
    "dependencyType": "variable",
    "dependencyId": "bc5ac490-faca-40d9-8649-e90fb0d64799",
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T07:14:14.704131Z",
-   "updatedAt": "2025-11-12T07:20:11.729908Z"
+   "updatedAt": "2025-11-12T07:22:11.934606Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -846,7 +870,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T07:04:46.785982Z",
-   "updatedAt": "2025-11-12T07:20:11.730915Z"
+   "updatedAt": "2025-11-12T07:22:11.932611Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -859,7 +883,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T07:04:33.317125Z",
-   "updatedAt": "2025-11-12T07:20:11.732815Z"
+   "updatedAt": "2025-11-12T07:22:11.93578Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -872,7 +896,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T07:04:14.183986Z",
-   "updatedAt": "2025-11-12T07:20:11.728917Z"
+   "updatedAt": "2025-11-12T07:22:11.933614Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -885,7 +909,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:32:30.320445Z",
-   "updatedAt": "2025-11-12T07:20:11.731881Z"
+   "updatedAt": "2025-11-12T07:22:11.937007Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -898,7 +922,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:22:19.395262Z",
-   "updatedAt": "2025-11-12T07:20:11.72562Z"
+   "updatedAt": "2025-11-12T07:22:11.927818Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -911,7 +935,7 @@
    "dependencyVersion": "live",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:21:57.512374Z",
-   "updatedAt": "2025-11-12T07:20:11.724567Z"
+   "updatedAt": "2025-11-12T07:22:11.929143Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -924,7 +948,7 @@
    "dependencyVersion": "draft",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:13:57.149167Z",
-   "updatedAt": "2025-11-12T07:20:11.727898Z"
+   "updatedAt": "2025-11-12T07:22:11.931408Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -937,7 +961,7 @@
    "dependencyVersion": "draft",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:08:24.942461Z",
-   "updatedAt": "2025-11-12T07:20:11.726655Z"
+   "updatedAt": "2025-11-12T07:22:11.930386Z"
   },
   {
    "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
@@ -950,7 +974,7 @@
    "dependencyVersion": "draft",
    "isDeleted": false,
    "createdAt": "2025-11-12T06:06:19.583267Z",
-   "updatedAt": "2025-11-12T07:20:11.723426Z"
+   "updatedAt": "2025-11-12T07:22:11.939136Z"
   }
  ]
 }

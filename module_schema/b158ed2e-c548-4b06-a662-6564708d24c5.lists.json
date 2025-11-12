@@ -1,0 +1,29 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2025-11-12T07:03:30.223Z",
+  "updatedAt": "2025-11-12T07:03:30.223Z",
+  "isDeleted": false,
+  "entityId": "b158ed2e-c548-4b06-a662-6564708d24c5",
+  "name": "lists",
+  "moduleId": "2662951e-3b7a-4150-a6d7-6fa6634f3a74",
+  "dataType": "list",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": [
+     "atul1",
+     "asdasd"
+    ]
+   },
+   {
+    "value": [
+     1,
+     2,
+     3,
+     4
+    ]
+   }
+  ]
+ }
+}

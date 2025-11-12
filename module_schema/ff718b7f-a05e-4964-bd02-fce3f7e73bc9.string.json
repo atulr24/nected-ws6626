@@ -1,0 +1,24 @@
+{
+ "entityType": "module_schema",
+ "data": {
+  "createdAt": "2025-11-12T06:59:15.764Z",
+  "updatedAt": "2025-11-12T06:59:15.764Z",
+  "isDeleted": false,
+  "entityId": "ff718b7f-a05e-4964-bd02-fce3f7e73bc9",
+  "name": "string",
+  "moduleId": "2662951e-3b7a-4150-a6d7-6fa6634f3a74",
+  "dataType": "string",
+  "usageType": "optional",
+  "options": [
+   {
+    "value": "Atul1"
+   },
+   {
+    "value": "Atul2"
+   },
+   {
+    "value": "Atul3"
+   }
+  ]
+ }
+}
