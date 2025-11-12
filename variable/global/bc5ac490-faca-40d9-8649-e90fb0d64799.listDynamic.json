@@ -1,0 +1,28 @@
+{
+ "entityType": "variable",
+ "data": {
+  "createdAt": "2025-11-12T06:57:35.998Z",
+  "updatedAt": "2025-11-12T06:57:35.998Z",
+  "isDeleted": false,
+  "commitId": "",
+  "status": "",
+  "lastVersion": "",
+  "isLive": null,
+  "commitInfo": {
+   "timeStamp": "0001-01-01T00:00:00Z"
+  },
+  "entityId": "bc5ac490-faca-40d9-8649-e90fb0d64799",
+  "name": "listDynamic",
+  "category": "globalVar",
+  "scope": "workspace",
+  "dataType": "list",
+  "value": {
+   "data": [
+    "aas",
+    "ASd",
+    "asd"
+   ],
+   "canReset": true
+  }
+ }
+}
