@@ -1,0 +1,454 @@
+{
+ "entityType": "rule",
+ "category": "decisionTable",
+ "data": {
+  "createdAt": "2025-11-12T06:03:18.787Z",
+  "updatedAt": "2025-11-12T06:23:09.98234Z",
+  "isDeleted": false,
+  "testedAt": "2025-11-12T06:23:09.981Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+  "name": "TestRule3",
+  "commitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-12 06:03:18",
+   "timeStamp": "2025-11-12T06:03:18.7878776Z"
+  },
+  "customInput": {
+   "name": {
+    "name": "name",
+    "dataType": "string",
+    "attribute": "name",
+    "sourceType": "dataSet",
+    "executedValue": "email@email.com"
+   }
+  },
+  "decisionTable": {
+   "rows": {
+    "rule_01": {
+     "nextId": "g_Y69TNn",
+     "firstOutputData": "output_yGccqO",
+     "isEnabled": true
+    },
+    "g_Y69TNn": {
+     "nextId": "g_fabb7c",
+     "prevId": "rule_01",
+     "firstOutputData": "output_IPzQgn",
+     "isEnabled": true
+    },
+    "g_fabb7c": {
+     "prevId": "g_Y69TNn",
+     "firstOutputData": "output_eJsK83",
+     "isEnabled": true
+    }
+   },
+   "properties": {
+    "rule_03": {
+     "nextId": "param_a6UuS2",
+     "type": "simpleCondition"
+    },
+    "param_a6UuS2": {
+     "prevId": "rule_03",
+     "type": "simpleCondition"
+    }
+   },
+   "results": {
+    "result_q1pczs": {
+     "dataType": "string",
+     "keyName": "keyName"
+    }
+   },
+   "firstRow": "rule_01",
+   "firstProperty": "rule_03",
+   "firstResult": "result_q1pczs",
+   "firstAggOutputData": "aggData_list"
+  },
+  "action": {
+   "then": {
+    "outputData": {
+     "output_eJsK83": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "executedValue": "email@email.com"
+     },
+     "output_yGccqO": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "executedValue": "email@email.com"
+     },
+     "aggData_list": {
+      "name": "list",
+      "dataType": "list",
+      "executedValue": [
+       12,
+       23,
+       34
+      ]
+     },
+     "output_IPzQgn": {
+      "name": "keyName",
+      "dataType": "excelFormula",
+      "executedValue": "email@email.com"
+     }
+    },
+    "actionNode": {
+     "actionData_restApi": {
+      "name": "restApi",
+      "connectorId": "1040715c-369c-4f03-b86c-4a23991afa83",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "settings": {
+        "cache": {
+         "enabled": false,
+         "duration": {
+          "value": 0,
+          "unit": "d"
+         },
+         "cacheKeys": ""
+        }
+       },
+       "queryParams": [],
+       "path": "/posts/2",
+       "query": "",
+       "method": "GET",
+       "headers": []
+      },
+      "next": "actionData_sendSalck"
+     },
+     "actionData_callRule": {
+      "name": "callRule",
+      "connectorId": "",
+      "entity": "rule",
+      "entityId": "ff4d805a-163e-4fec-b0ec-4502a7f9de5a",
+      "config": {
+       "query": ""
+      },
+      "input": {
+       "name": {
+        "name": "name",
+        "dataType": "string",
+        "returnType": "email@email.com"
+       }
+      },
+      "next": "actionData_callWorkFlow"
+     },
+     "actionData_sendSalck": {
+      "name": "sendSalck",
+      "connectorId": "ea3f7114-1a38-4224-a6a1-fb692cee6699",
+      "entity": "",
+      "entityId": "",
+      "config": {
+       "text": "Test",
+       "query": "",
+       "action": "sendMessage",
+       "channel": {
+        "value": "atul-channel",
+        "is_private": false,
+        "label": "atul-channel"
+       },
+       "settings": {
+        
+       },
+       "tokenType": "userToken",
+       "actionMethod": "sendMessage"
+      }
+     },
+     "actionData_callWorkFlow": {
+      "name": "callWorkFlow",
+      "connectorId": "",
+      "entity": "workflow",
+      "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+      "config": {
+       "query": ""
+      },
+      "input": {
+       "name": {
+        "name": "name",
+        "dataType": "string",
+        "returnType": "email@email.com"
+       }
+      },
+      "next": "actionData_restApi"
+     }
+    },
+    "firstActionNode": "actionData_callRule"
+   },
+   "else": {
+    
+   }
+  },
+  "conditions": {
+   "nodes": {
+    "c_ItpVDp": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_fabb7c",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_HvMUhQ"
+     ],
+     "siblingIndex": 1
+    },
+    "c_u3cQkA": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_Sblk4G"
+     ],
+     "siblingIndex": 1
+    },
+    "c_xP8vkU": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_Y69TNn",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_O1sru4"
+     ],
+     "siblingIndex": 1
+    },
+    "g_fabb7c": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_ItpVDp",
+      "c_EJnKUx"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_KnFFuP": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_EJnKUx",
+     "siblingIndex": 1
+    },
+    "rhs_O1sru4": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_xP8vkU",
+     "siblingIndex": 1
+    },
+    "rhs_p1GpFi": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "rule_02",
+     "siblingIndex": 1
+    },
+    "param_a6UuS2": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "rule_02": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "rule_01",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_p1GpFi"
+     ],
+     "siblingIndex": 1
+    },
+    "g_Y69TNn": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "c_iPjgg6",
+      "c_xP8vkU"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_HvMUhQ": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_ItpVDp",
+     "siblingIndex": 1
+    },
+    "c_iPjgg6": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_Y69TNn",
+     "leftNode": [
+      "rule_03"
+     ],
+     "rightNode": [
+      "rhs_1Ql6F3"
+     ],
+     "siblingIndex": 1
+    },
+    "rhs_1Ql6F3": {
+     "sourceType": "dataSet",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_iPjgg6",
+     "siblingIndex": 1
+    },
+    "rhs_Sblk4G": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "parent": "c_u3cQkA",
+     "siblingIndex": 1
+    },
+    "rule_01": {
+     "operator": "and",
+     "nodeType": "group",
+     "children": [
+      "rule_02",
+      "c_u3cQkA"
+     ],
+     "siblingIndex": 1
+    },
+    "rule_03": {
+     "sourceType": "customInput",
+     "dataType": "string",
+     "nodeType": "params",
+     "attribute": "name",
+     "siblingIndex": 1
+    },
+    "c_EJnKUx": {
+     "value": "",
+     "operator": "eq",
+     "dataType": "string",
+     "nodeType": "condition",
+     "parent": "g_fabb7c",
+     "leftNode": [
+      "param_a6UuS2"
+     ],
+     "rightNode": [
+      "rhs_KnFFuP"
+     ],
+     "siblingIndex": 1
+    }
+   }
+  },
+  "firstCustomInput": "name",
+  "description": "",
+  "policy": "evaluteAll",
+  "version": "draft",
+  "type": "decisionTable",
+  "dataSetId": "4a531693-6a33-45bb-b71c-a42f6353c00d",
+  "settings": {
+   "api": {
+    "isEnabled": true,
+    "isPrivate": true
+   },
+   "isEnabled": true,
+   "cachingInfo": {
+    "Enabled": false,
+    "Duration": {
+     "Value": 0,
+     "Unit": ""
+    },
+    "CacheKeys": ""
+   },
+   "timezone": "Asia/Calcutta",
+   "dateFormat": "in"
+  },
+  "isDemo": false,
+  "schemaVersion": "0.1.1"
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_sendSalck",
+   "dependencyType": "connector",
+   "dependencyId": "ea3f7114-1a38-4224-a6a1-fb692cee6699",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:22:19.395262Z",
+   "updatedAt": "2025-11-12T06:22:19.395262Z"
+  },
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_restApi",
+   "dependencyType": "connector",
+   "dependencyId": "1040715c-369c-4f03-b86c-4a23991afa83",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:21:57.512374Z",
+   "updatedAt": "2025-11-12T06:22:19.394227Z"
+  },
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_callWorkFlow",
+   "dependencyType": "workflow",
+   "dependencyId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:13:57.149167Z",
+   "updatedAt": "2025-11-12T06:22:19.397245Z"
+  },
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
+   "entityNodeId": "then-actionData_callRule",
+   "dependencyType": "rule",
+   "dependencyId": "ff4d805a-163e-4fec-b0ec-4502a7f9de5a",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:08:24.942461Z",
+   "updatedAt": "2025-11-12T06:22:19.396188Z"
+  },
+  {
+   "entityCommitId": "commit-baf03a8f-6684-46b9-be13-af9b0d9bacfa",
+   "entityType": "rule",
+   "entityId": "edb28948-3898-442a-b3d7-34efd2092bb8",
+   "entityVersion": "draft",
+   "entityNodeId": "dataSet",
+   "dependencyType": "dataSet",
+   "dependencyId": "4a531693-6a33-45bb-b71c-a42f6353c00d",
+   "dependencyVersion": "draft",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:06:19.583267Z",
+   "updatedAt": "2025-11-12T06:22:19.393244Z"
+  }
+ ]
+}

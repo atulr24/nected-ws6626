@@ -1,0 +1,685 @@
+{
+ "entityType": "workflow",
+ "data": {
+  "testedAt": "2025-11-12T06:13:13.938Z",
+  "publishedAt": "0001-01-01T00:00:00Z",
+  "createdAt": "2025-11-12T06:09:09.39Z",
+  "updatedAt": "2025-11-12T06:13:13.939169Z",
+  "isDeleted": false,
+  "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+  "name": "TestWorkflowforRuleAction",
+  "commitId": "commit-79e161fc-f371-4e73-8031-48a6f5e01dca",
+  "status": "tested",
+  "lastVersion": "",
+  "isLive": false,
+  "commitInfo": {
+   "title": "Created at 2025-11-12 06:09:09",
+   "timeStamp": "2025-11-12T06:09:09.390595363Z"
+  },
+  "startNode": "n_GRIGVW",
+  "version": "draft",
+  "description": "",
+  "trigger": {
+   
+  },
+  "nodes": [
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 0
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "1",
+    "type": "trigger",
+    "data": {
+     "input": {
+      "name": {
+       "executedValue": "Atul",
+       "name": "name",
+       "dataType": "string"
+      }
+     },
+     "executedValue": {
+      "name": "Atul"
+     },
+     "settings": {
+      "cacheEnabled": false,
+      "durationUnit": "d",
+      "durationValue": 0,
+      "authType": "private",
+      "cacheKeys": "",
+      "isEnabled": true
+     },
+     "nodeType": "apiTrigger",
+     "name": "Trigger",
+     "runInLoop": {
+      
+     },
+     "blockName": "trigger",
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 130
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_CR95Hp",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 205
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_GRIGVW",
+    "type": "setVarNode",
+    "data": {
+     "input": {
+      "sys": {
+       "executedValue": "Value",
+       "name": "sys",
+       "dataType": "string",
+       "source": "systemVar",
+       "attribute": "ExecutionId",
+       "order": 1
+      },
+      "name": {
+       "executedValue": "ads",
+       "name": "name",
+       "dataType": "string",
+       "source": "globalVar",
+       "attribute": "test"
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": {
+       "sys": "test_workflow:1045:87ffacc3-315c-43d6-b435-c6922f14d4ed:draft:2c895219-28dd-40c6-8b76-33838d9d97a7",
+       "name": "ads"
+      },
+      "resetOutput": {
+       
+      }
+     },
+     "settings": {
+      "errorContinue": false
+     },
+     "nodeType": "setVarNode",
+     "entity": "setVariableNode",
+     "entityId": "n_GRIGVW",
+     "status": "success",
+     "name": "SetVariable",
+     "runInLoop": {
+      
+     },
+     "blockName": "setVariable",
+     "testedAt": "2025-11-12T06:13:13.938Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 335
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_3JJLtU",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 410
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_6YlF6m",
+    "type": "codeNode",
+    "data": {
+     "input": {
+      "snippet": {
+       "value": "let a=5;\nlet j;\nfor (i=0;i<4;i++){\n  j=a+i;\n}\nj"
+      },
+      "language": {
+       "value": "JS"
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": 8
+     },
+     "settings": {
+      "timeoutAsync": 20,
+      "errorContinue": false,
+      "timeout": 10
+     },
+     "nodeType": "codeNode",
+     "entity": "codeNode",
+     "entityId": "n_6YlF6m",
+     "status": "success",
+     "name": "Code",
+     "runInLoop": {
+      
+     },
+     "blockName": "code",
+     "testedAt": "2025-11-12T06:13:13.938Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 540
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_TGvtsc",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 615
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_6QICEE",
+    "type": "dbNode",
+    "data": {
+     "input": {
+      "action": {
+       "value": 0
+      },
+      "query": {
+       "value": "db.comments.find({})"
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": [
+       {
+        "movie_id": "573a1391f29313caabcd7da6",
+        "_id": "5a9427648b0beebeb6957b51",
+        "Bool": false,
+        "date": "2025-11-01T05:49:56Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "john.doe@example.com",
+        "Integer": "100"
+       },
+       {
+        "Bool": false,
+        "date": "1975-01-21T00:31:22Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "john_bishop@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd446f",
+        "_id": "5a9427648b0beebeb69579f5"
+       },
+       {
+        "Bool": false,
+        "date": "2015-02-08T01:28:23Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "hafthór_júlíus_björnsson@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd5b9a",
+        "_id": "5a9427648b0beebeb6957a4b"
+       },
+       {
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd6d40",
+        "_id": "5a9427648b0beebeb6957aa3",
+        "Bool": false,
+        "date": "1980-07-13T06:41:13Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "yolanda_owen@fakegmail.com"
+       },
+       {
+        "movie_id": "573a1390f29313caabcd587d",
+        "_id": "5a9427648b0beebeb6957a38",
+        "Bool": false,
+        "date": "2012-11-26T11:00:57Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "gemma_whelan@gameofthron.es",
+        "Integer": "100"
+       },
+       {
+        "Bool": false,
+        "date": "1982-07-06T15:10:41Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "owen_teale@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd7c9e",
+        "_id": "5a9427648b0beebeb6957b44"
+       },
+       {
+        "movie_id": "573a1391f29313caabcd8543",
+        "_id": "5a9427648b0beebeb6957ba7",
+        "date": "2011-08-11T22:12:38Z",
+        "name": "Rodrik Cassel",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "ron_donachie@gameofthron.es"
+       },
+       {
+        "_id": "5a9427648b0beebeb6957bb6",
+        "date": "1985-02-24T20:04:25Z",
+        "name": "Ellaria Sand",
+        "text": {
+         "$cond": {
+          "else": "NegativeReview",
+          "then": "PositiveReview",
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          }
+         }
+        },
+        "email": "indira_varma@gameofthron.es",
+        "movie_id": "573a1391f29313caabcd8780"
+       },
+       {
+        "_id": "5a9427648b0beebeb6957b1a",
+        "Bool": false,
+        "date": "2001-02-09T20:18:49Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "roxanne_mckee@gameofthron.es",
+        "Integer": "100",
+        "movie_id": "573a1391f29313caabcd7850"
+       },
+       {
+        "Bool": false,
+        "date": "1970-11-15T05:54:02Z",
+        "name": "email@email.com",
+        "text": {
+         "$cond": {
+          "if": {
+           "$eq": [
+            "$Bool",
+            true
+           ]
+          },
+          "else": "NegativeReview",
+          "then": "PositiveReview"
+         }
+        },
+        "email": "taylor_scott@fakegmail.com",
+        "Integer": "100",
+        "movie_id": "573a1390f29313caabcd4eaf",
+        "_id": "5a9427648b0beebeb6957a22"
+       }
+      ]
+     },
+     "settings": {
+      "errorContinue": false,
+      "timeout": 10,
+      "rowLimit": 1000,
+      "cacheEnabled": false,
+      "durationUnit": "m",
+      "timeoutAsync": 20,
+      "durationValue": 5
+     },
+     "nodeType": "dbNode",
+     "entity": "connector",
+     "entityId": "a3081ab9-27e1-40d0-8220-cb8fbe83d426",
+     "status": "success",
+     "name": "mongodb",
+     "runInLoop": {
+      
+     },
+     "blockName": "mongodb",
+     "testedAt": "2025-11-12T06:13:13.938Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 745
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_O1Xk3w",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   },
+   {
+    "position": {
+     "y": 820,
+     "x": 391.7129821777344
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_9AhqwD",
+    "type": "responseNode",
+    "data": {
+     "input": {
+      "key_0": {
+       "executedValue": "john_bishop@fakegmail.com",
+       "name": "key_0",
+       "dataType": "string",
+       "source": "mongodb",
+       "attribute": "output[1].email"
+      }
+     },
+     "executedValue": {
+      "error": "",
+      "output": {
+       "key_0": "john_bishop@fakegmail.com"
+      }
+     },
+     "settings": {
+      "timeout": 10,
+      "timeoutAsync": 20,
+      "errorContinue": false
+     },
+     "nodeType": "responseNode",
+     "entity": "responseNode",
+     "entityId": "n_9AhqwD",
+     "status": "success",
+     "name": "Response",
+     "runInLoop": {
+      
+     },
+     "blockName": "response",
+     "testedAt": "2025-11-12T06:13:13.938Z"
+    }
+   },
+   {
+    "position": {
+     "x": 391.7129821777344,
+     "y": 950
+    },
+    "sourcePosition": "bottom",
+    "targetPosition": "top",
+    "id": "n_fM526W",
+    "type": "addNode",
+    "data": {
+     "nodeType": "addNodeMd",
+     "runInLoop": {
+      
+     },
+     "testedAt": "0001-01-01T00:00:00Z"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_4DG8CG",
+    "source": "1",
+    "target": "n_CR95Hp",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_9vEyw4",
+    "source": "n_GRIGVW",
+    "target": "n_3JJLtU",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_2A8Fk2",
+    "source": "n_CR95Hp",
+    "target": "n_GRIGVW",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_jnhr8Q",
+    "source": "n_6YlF6m",
+    "target": "n_TGvtsc",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "strokeWidth": 1,
+     "stroke": "gray"
+    },
+    "id": "e_TSf459",
+    "source": "n_3JJLtU",
+    "target": "n_6YlF6m",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_boiDs4",
+    "source": "n_6QICEE",
+    "target": "n_O1Xk3w",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_y0jouB",
+    "source": "n_TGvtsc",
+    "target": "n_6QICEE",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_lKud74",
+    "source": "n_9AhqwD",
+    "target": "n_fM526W",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   },
+   {
+    "style": {
+     "stroke": "gray",
+     "strokeWidth": 1
+    },
+    "id": "e_BOl9Ob",
+    "source": "n_O1Xk3w",
+    "target": "n_9AhqwD",
+    "data": {
+     "edgeType": "then"
+    },
+    "type": "smoothEdge"
+   }
+  ],
+  "isEnabled": true,
+  "settings": {
+   
+  },
+  "isDemo": false
+ },
+ "dependencies": [
+  {
+   "entityCommitId": "commit-79e161fc-f371-4e73-8031-48a6f5e01dca",
+   "entityType": "workflow",
+   "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+   "entityVersion": "draft",
+   "entityNodeId": "n_6QICEE",
+   "dependencyType": "connector",
+   "dependencyId": "a3081ab9-27e1-40d0-8220-cb8fbe83d426",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:12:51.106752Z",
+   "updatedAt": "2025-11-12T06:13:08.271933Z"
+  },
+  {
+   "entityCommitId": "commit-79e161fc-f371-4e73-8031-48a6f5e01dca",
+   "entityType": "workflow",
+   "entityId": "87ffacc3-315c-43d6-b435-c6922f14d4ed",
+   "entityVersion": "draft",
+   "entityNodeId": "test",
+   "dependencyType": "variable",
+   "dependencyId": "50eabd71-ffcd-443a-b8ea-102c55e40c5b",
+   "dependencyVersion": "live",
+   "isDeleted": false,
+   "createdAt": "2025-11-12T06:09:54.571Z",
+   "updatedAt": "2025-11-12T06:13:08.273096Z"
+  }
+ ]
+}
